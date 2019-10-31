@@ -1,0 +1,44 @@
+ABSTRACT
+the Address Resolution Protocol (ARP) due to its lack of an authentication mechanism for verifying the identity of the sender has a long history of being prone to spoofing attacks. ARP spoofing is the starting point for more sophisticated LAN attacks like denial of service, man in the middle and session hijacking. The drawback of this system is most of the host in a LAN must follow the MR-ARP protocol. In this paper a centralized server will collects all the ip-mac pairs of every host in the LAN and maintains a table of legitimate host. Destination host checks the IP-mac conflict in the LAN                                                             and informs about the hacker to the centralized server which takes care of the trusted communication between the participating hosts. Hence, the proposed work detection and prevention of ARP spoofing lead to appreciable result.
+ 
+Introduction:
+ This program basically monitors all ARP/IP address pairing and alerts its user when changes occur. It does this by listening on the network, much like a sniffer, and comparing all captured replies against a database. The programs take a snapshot of all related IP/MAC addresses, and periodically request updates from networked computers. These methods often result in numerous false alarms due to DCHP (Dynamic host configuration protocol) networks, which dynamically assign IP addresses.
+Related works and background:
+Several solutions have been proposed to mitigate the ARP spoofing, but each has its limitations. The solutions have been classified into five different categories:
+•	Modifying ARP using cryptographic techniques: 
+These solutions add some cryptographic features to the ARP protocol, but will not be compatible with the standard ARP and affect the protocol performance.
+•	Kernel-based patching:
+ The technique adds a patch to the operating system kernel in order to prevent ARP spoofing attacks, but the problem is that not all operating systems can be patched and it may become incompatible with the standard ARP protocol.
+•	Securing switch Ports: 
+Use the switch port security or Dynamic ARP inspection (DAI) option to prevent ARP spoofing. However, its ability of preventing ARP spoofing easily, the cost of implementing such solution may not be acceptable by most of the organizations.
+•	ARP spoof detection & protection software:
+ Programs or tools developed to prevent ARP spoofing attacks, but the experimental results have shown there ineffectiveness in protection.
+•	Manually configuring static ARP entries:
+ The most basic and effective way to prevent ARP spoofing is adding static ARP entries at each host. However, this solution cannot be easily managed and cannot scale well specially in organizations that have large number of users and require a heavy workload on the network administrator.
+
+PROBLEM DEFINITION
+The ARP protocol is the only protocol which gives the solution to the Mac address for the communication. Once a system knows an IP address of the communication system it will broad cast IP address to know the Mac address of the system but because of this volatile catch mechanism hacker can easily hack any system by sending its Mac address as the pair of IP address broadcast and can spoof data.
+
+ PROPOSED SOLUTION
+This method achieves complete detection of ARP spoofing with a minimal burden by involving proposed tool.
+Using a function we first get the real mac address of the victims system. then we get the mac response mac address from the gateway. If they are same then no spoofing attack has been done else there is spoofing detector.
+We are using a detecting tool to detect whether the ARP spoofing attack has been done or not. 
+
+Implementation:
+using a function we first get the real mac address of the victim’s system. then we get the mac response mac address from the gateway. If they are same then no spoofing attack has been done else there is spoofing detected.
+
+References:
+•	Detection and Prevention of ARP Spoofing using Centralized Server
+•	https://pdfs.semanticscholar.org/b188/cbb71682c863ab44f216360bac84cb15bcf9.pdf
+•	 https://searchsecurity.techtarget.com/tip/ARP-spoofing-detection
+•	https://fossbytes.com/arp-spoofing-attacks-detection-prevention/
+•	https://link.springer.com/chapter/10.1007/11593980_18
+•	https://en.wikipedia.org/wiki/ARP_spoofing
+
+  
+
+
+
+
+
+ 
